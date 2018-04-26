@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>EmpireLight Client</title>
+	<!-- From RabbitMQ-Web-Stomp examples -->
+    <script src="assets/communications/jquery-3.1.0.min.js"></script>
+    <script src="assets/NoSleep.js"></script>
+	<link rel="stylesheet" href="assets/showstyles.css" />
+	    <!-- From: http://cdn.sockjs.org/ --> 
+    <script src="assets/communications/sockjs-0.3.js"></script>
+
+    <!-- From RabbitMQ-Web-Stomp examples -->
+    <script src="assets/communications/stomp.js"></script>
+
+    <!-- Our example app -->
+    <script src="assets/communications/listener-app.js"></script>
+    <script>
+    var noSleep = new NoSleep();
+
+	   function enableNoSleep() {
+		 noSleep.enable();
+		 document.removeEventListener('touchstart', enableNoSleep, false);
+	   }
+		$( document ).ready(function() {
+    		document.getElementById('shape-overlay').onclick = function() {
+	   					alert('NoSleep Enabled');
+						document.addEventListener('touchstart', enableNoSleep, false);
+	   		};
+		});
+	   // Enable wake lock.
+	   // (must be wrapped in a user input event handler e.g. a mouse or touch handler)
+	   		
+	</script>
+</head>
+<body id="body" class="shape-heart shape-fade1s white col-fade1s">
+<div id="shape-overlay">
+</div>
+<div id="blackout-overlay">
+</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+body {
+	background-color: black;
+	padding: 0%;
+	margin: 0%;
+	overflow: hidden;
+}
+#blackout-overlay {
+	width:100%;
+	height:100%;
+	background:black;
+	opacity:0;
+	position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -webkit-transition: opacity .5s;
+    -o-transition: opacity .5s;
+}
+body.blackout #blackout-overlay {
+	opacity:1;
+}
+#shape-overlay
+{
+	width:100%;
+	height:100%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url('shapes/transparent.png');
+	position: absolute;
+    top: 0px;
+    left: 0px;
+}
+body.shapeFX-rotateCW #shape-overlay
+{
+    -webkit-animation: rotate 5s infinite linear;
+    -moz-animation: rotate 5s infinite linear;
+    animation: rotate 5s infinite linear;
+}
+@keyframes RotateCW {
+    0% { transform:rotate(0); }
+    100% { transform:rotate(360deg); }
+}
+body.shapeFX-rotateCCW #shape-overlay
+{
+    -webkit-animation: rotateCCW 5s infinite linear;
+    -moz-animation: rotateCCW 5s infinite linear;
+    animation: rotateCCW 5s infinite linear;
+}
+@keyframes RotateCCW{
+    0% { transform:rotate(360deg); }
+    100% { transform:rotate(0); }
+}
+@keyframes Strobe{
+    50% { opacity:0; }
+}
+@keyframes colPulse{
+    50% { opacity:0; }
+}
+body.shape-fade0_5s #shape-overlay
+{
+    transition: background-image 0.5s;
+    -moz-transition: background-image 0.5s;
+    -webkit-transition: background-image 0.5s;
+    -o-transition: background-image 0.5s;
+}
+body.shape-fade1s #shape-overlay
+{
+    transition: background-image 1s;
+    -moz-transition: background-image 1s;
+    -webkit-transition: background-image 1s;
+    -o-transition: background-image 1s;
+}
+body.shape-fade2s #shape-overlay
+{
+    transition: background-image 2s;
+    -moz-transition: background-image 2s;
+    -webkit-transition: background-image 2s;
+    -o-transition: background-image 2s;
+}
+body.shape-fade3s #shape-overlay
+{
+    transition: background-image 3s;
+    -moz-transition: background-image 3s;
+    -webkit-transition: background-image 3s;
+    -o-transition: background-image 3s;
+}
+body.shape-fade4s #shape-overlay
+{
+    transition: background-image 4s;
+    -moz-transition: background-image 4s;
+    -webkit-transition: background-image 4s;
+    -o-transition: background-image 4s;
+}
+body.shape-fade5s #shape-overlay
+{
+    transition: background-image 5s;
+    -moz-transition: background-image 5s;
+    -webkit-transition: background-image 5s;
+    -o-transition: background-image 5s;
+}
+body.shape-fade10s #shape-overlay
+{
+    transition: background-image 10s;
+    -moz-transition: background-image 10s;
+    -webkit-transition: background-image 10s;
+    -o-transition: background-image 10s;
+}
+body.shape-none #shape-overlay {
+	background-image: none;
+	background-size:100%;
+}
+body.shape-heart #shape-overlay {
+	background-image: url('shapes/heart.png');
+}
+body.shape-star #shape-overlay {
+	background-image: url('shapes/star.png');
+}
+body.shape-sun #shape-overlay {
+	background-image: url('shapes/sun.png');
+}
+body.red #shape-overlay{
+	background-color: red;
+}
+body.white #shape-overlay{
+	background-color: white;
+}
+body.green #shape-overlay {
+	background-color: green;
+}
+body.blue #shape-overlay{
+	background-color: blue;
+}
+
+body.orange #shape-overlay{
+	background-color: orange;
+}
+body.yellow #shape-overlay {
+	background-color: yellow;
+}
+body.darkGreen #shape-overlay{
+	background-color: white;
+}
+body.lightGreen #shape-overlay{
+	background-color: white;
+}
+.col-fade0_5s, body.col-fade0_5s #shape-overlay{
+    transition: background-color 0.5s;
+    -moz-transition: background-color 0.5s;
+    -webkit-transition: background-color 0.5s;
+    -o-transition: background-color 0.5s;
+}
+.col-fade1s, body.col-fade1s #shape-overlay{
+    transition: background-color 1s;
+    -moz-transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -o-transition: background-color 1s;
+}
+.col-fade2s, body.col-fade2s #shape-overlay {
+    transition: background-color 2s;
+    -moz-transition: background-color 2s;
+    -webkit-transition: background-color 2s;
+    -o-transition: background-color 2s;
+}
+.col-fade3s, body.col-fade3s #shape-overlay {
+    transition: background-color 3s;
+    -moz-transition: background-color 3s;
+    -webkit-transition: background-color 3s;
+    -o-transition: background-color 3s;
+}
+.col-fade4s, body.col-fade4s #shape-overlay {
+    transition: background-color 4s;
+    -moz-transition: background-color 4s;
+    -webkit-transition: background-color 4s;
+    -o-transition: background-color 4s;
+}
+.col-fade5s, body.col-fade5s #shape-overlay {
+    transition: background-color 5s;
+    -moz-transition: background-color 5s;
+    -webkit-transition: background-color 5s;
+    -o-transition: background-color 5s;
+}
+.col-fade10s, body.col-fade10s #shape-overlay {
+    transition: background-color 10s;
+    -moz-transition: background-color 10s;
+    -webkit-transition: background-color 10s;
+    -o-transition: background-color 10s;
+}
+
+body.shapeFX-pulse #shape-overlay
+{
+    -webkit-animation: Pulse 1s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0;
+}
+@-webkit-keyframes Pulse {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+@keyframes Breath {
+	0% { transform: scale(0.9); }
+	30% { transform: scale(1); }
+	40% { transform: scale(1.12); }
+	55% { transform: scale(1); }
+	70% { transform: scale(1.12); }
+	80% { transform: scale(1); }
+	100% { transform: scale(0.9); }
+}
+
+body.shapeFX-breath #shape-overlay
+{
+    animation-name: Breath;
+	animation-duration: 3500ms;
+	/* transform-origin:70% 70%; */
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+
+@-webkit-keyframes Rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+@-ms-keyframes Rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+@-o-keyframes Rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
+@keyframes Rainbow {
+0% {background-color: #ff0000;}
+10% {background-color: #ff8000;}
+20% {background-color: #ffff00;}
+30% {background-color: #80ff00;}
+40% {background-color: #00ff00;}
+50% {background-color: #00ff80;}
+60% {background-color: #00ffff;}
+70% {background-color: #0080ff;}
+80% {background-color: #0000ff;}
+90% {background-color: #8000ff;}
+100% {background-color: #ff0080;}
+}
